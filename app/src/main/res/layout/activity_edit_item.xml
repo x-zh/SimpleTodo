@@ -7,36 +7,36 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.codepath.simpletodo.MainActivity">
+    tools:context=".EditItemActivity">
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/add_item"
-        android:onClick="onAddItem"
-        android:id="@+id/btnAddItem"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:text="@string/edit_item_below"
+        android:id="@+id/tvEditItemBelow"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/etNewItem"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/etTodoContent"
+        android:layout_below="@+id/tvEditItemBelow"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/btnAddItem"
-        android:layout_toStartOf="@+id/btnAddItem"
-        android:inputType="text"
-        android:hint="@string/what_to_do" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:inputType="text" />
 
-    <ListView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/lvItems"
-        android:layout_alignParentTop="true"
+        android:text="@string/save"
+        android:onClick="onSaveItem"
+        android:id="@+id/btnSave"
+        android:layout_below="@+id/etTodoContent"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/btnAddItem" />
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
